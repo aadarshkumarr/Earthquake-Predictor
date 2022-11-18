@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content=" A Machine learning Project!">
+  <meta name="keywords" content="ML,  learning, machine, machine learning, projects,">
+
+  <meta name="author" content="Shivansh Vasu">
+  <link rel="icon" href="static/logo.png" type="image/gif" >
+  {% block headthing %}   {% endblock headthing %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title> Earthquake Predictor Machine Learning Project |  {% block title %} {% endblock title %} </title>
+ 
+  <style>
+   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background : black;
+  
+} 
+nav{
+  display: flex;
+  height: 90px;
+  width: 100%;
+  background: #000000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e5e5e5;
+
+}
+nav .logo{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+nav ul  {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  z-index:9999999;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 4px 17px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: rgb(0, 0, 0);
+  font-weight: 700px;
+  background: #00cbfe;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 950px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #00cbfe;
+  }
+}
+
+
+
+
+
+
+
+
+
+::selection{
+  color: #000000;
+  background: #ffffff;
+}
+
+
+
+{% block css %}
+
+{% endblock css %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer2 {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+ 
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #ffffff;
+  background-color: rgb(0, 0, 0);
+  border-top: 1px solid #e5e5e5;
+  font-weight: 300;
+  font-size: 17px;
+
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+   font-size: 13px;
+}
+
+.footer__logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 20px;
+  z-index: inherit; 
+ 
+
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav__title {
+  font-weight: 500;
+  font-size: 17px;
+  padding-bottom: 19px;
+
+}
+
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgba(124, 0, 0, 0.07);
+  border-radius: 100px;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 11px;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+   font-size: 14px;
+
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+footer a:hover {
+  color: #00cbfe;
+  font-size: 16px;
+
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: rgb(255, 255, 255);
+  
+}
+
+
+
+.legal {
+ 
+  background-color: black;
+color: rgb(255, 255, 255);
+text-align: center;
+ width: 100%;
+ font-size: 13px;
+ padding-bottom:18px;
+}
+
+
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+ </style>
+
+ </head>
+
+<body  >
+
+  <nav>
+    <div class="logo">
+    <a href="/" style="text-decoration: none; color: #00cbfe;" >
+      
+
+      Earthquake Predictor </a>
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i style=" font-family: 'Poppins', sans-serif;   font-size: 15px;
+  font-weight: 600;  padding: 4px 17px;   border-radius: 5px; background:#00cbfe; color: black ;" >
+   Menu </i>
+    </label>
+    <ul>
+      <li><a class=" {% block titleactive1 %}  {% endblock titleactive1 %}  " href="/home">Home</a></li>
+      <li><a class=" {% block titleactive2 %}  {% endblock titleactive2 %}  " href="/aboutproject">About Project</a></li>
+      <li><a class=" {% block titleactive4 %}  {% endblock titleactive4 %}  " href="/sourcecode">Source Code</a></li>
+      <li><a class=" {% block titleactive5 %}  {% endblock titleactive5 %}  " href="/review">Review</a></li>
+      </ul>
+  </nav>
+
+
+
+{% block body %}
+
+{% endblock body %}
+
+
+
+<div class="footer2">
+  <footer class="footer">
+    <div class="footer__addr">
+
+
+<div class="legal">
+<h2 style="color: #00cbfe; font-size:17px; font-weight:400;"> A Product of Application Atmosphere Pvt. Ltd. <br> 
+Website Created by : <a href="https://aadarshkumar.in" target="_blank" style="color:white; font-size:17px;" > Aadarsh Kumar </a></h2>
+<br>
+<a href="/aboutproject" style="text-decoration: underline ; color: white; font-size:16px" > About this Project  </a>
+  
+  <br> <br>
+
+  <p>&copy;  2022  Earthquake Predictor  | All Rights Reserved 
+  </p>
+</div>
+</footer>
+</div>
+</body>
+
+</html>

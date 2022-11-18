@@ -1,0 +1,208 @@
+
+{% extends 'base.html' %}
+
+
+{% block titleactive4 %} active {% endblock titleactive4 %}
+
+{% block title %} 
+
+Source Code of Project
+{% endblock title %}
+
+{% block headthing %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock headthing %}
+
+
+{% block css %}
+
+
+
+.wrapper{
+position: relative;
+margin : 40px auto;
+max-width: 400px;
+background: #000;
+border-radius: 5px;
+box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+border: 2px solid white;
+}
+
+.wrapper .head-text{
+line-height: ;
+color: #000;
+border-radius: 5px 5px 0 0;
+border-bottom: 2px solid black;
+padding: 20px 20px;
+font-weight: 600;
+font-size: 23px;
+background: #00cbfe;
+text-align: center;
+}
+
+.wrapper .chat-box{
+padding: 20px;
+width: 100%;
+}
+
+
+.chat-box form{
+padding: 35px 25px;
+margin: 20px 0;
+border-radius: 5px;
+border: 1px solid lightgrey;
+background: #000;
+}
+.chat-box form .field{
+height: 30px;
+width: 100%;
+
+}
+
+
+
+
+.historytab {
+margin: 15px auto;
+width: 100%;
+display: flex;
+background: #000;
+}
+ .historytab a{
+padding:10px 60px;
+align-items: self;
+margin: 15px auto;
+text-decoration:none;
+cursor: pointer;
+color: #000;
+font-size: 18px;
+font-weight: 500;
+border: 2px solid Black;
+border-radius: 5px;
+background: #00cbfe;
+
+}
+
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+.row1{
+  color: white;
+  background: White;
+  text-align: center;
+  margin: 10px auto ;
+
+}
+.row1 img{
+    align-items: center;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.row1 p{ 
+font-size: 35px;
+color : Black;
+margin:  auto;
+letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock css %}
+
+
+
+
+{% block body %}
+
+
+
+<div class="wrapper">
+  <div class="head-text">
+    Source Code of the Project
+  </div>
+  <div class="chat-box">
+
+    <form action="#">
+       
+     
+        <div class="row1" style="color:white; background: #000;" >
+        
+            <img src="static/github.png" >
+               <div class="historytab"  style=" margin-top:-25px ;">
+         <a  href="/error"> Go to Github </a>
+
+          
+
+        </div>
+            <div class="head-text" style="color:white; font-size: 14px; font-weight: 400; margin-bottom:-25px; margin-top:-25px ; background: #000;  ">
+     Don't forget to Drop a Star and Contribute us as an Open Source Project!
+  </div>
+          
+            
+        </div>
+    </div>
+
+
+
+       
+
+    </form>
+      
+        <div class="historytab"  style=" margin-top:-25px ;" >
+         <a  href="/review"> Give Review !</a>
+        </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}

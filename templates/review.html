@@ -1,0 +1,449 @@
+
+{% extends 'base.html' %}
+
+
+{% block titleactive5 %} active {% endblock titleactive5 %}
+
+
+{% block title %} 
+Give Your Review !
+{% endblock title %}
+
+{% block headthing %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock headthing %}
+
+
+{% block css %}
+
+
+
+.wrapper2{
+position: relative;
+margin : 40px auto;
+max-width: 400px;
+background: #000;
+border-radius: 5px;
+box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+border: 2px solid white;
+}
+
+.wrapper2 .head-text{
+line-height: ;
+color: #000;
+border-radius: 5px 5px 0 0;
+border-bottom: 2px solid black;
+padding: 20px 20px;
+font-weight: 600;
+font-size: 20px;
+background: #00cbfe;
+text-align: center;
+}
+
+.wrapper2 .chat-box{
+padding: 20px;
+width: 100%;
+}
+
+.chat-box form{
+padding: 35px 25px;
+margin: 20px 0;
+border-radius: 5px;
+border: 1px solid lightgrey;
+background: #000;
+}
+.chat-box form .field{
+height: 30px;
+width: 100%;
+
+}
+
+
+
+
+.historytab {
+margin: 15px auto;
+width: 100%;
+display: flex;
+background: #000;
+}
+ .historytab a{
+padding:10px 60px;
+align-items: self;
+margin: 15px auto;
+text-decoration:none;
+cursor: pointer;
+color: #000;
+font-size: 18px;
+font-weight: 500;
+border: 2px solid Black;
+border-radius: 5px;
+background: #00cbfe;
+
+}
+
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+.row1{
+  color: white;
+  background: White;
+  text-align: center;
+  margin: 10px auto ;
+
+}
+.row1 img{
+    align-items: center;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.row1 p{ 
+font-size: 35px;
+color : Black;
+margin:  auto;
+letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.wrapper{
+  max-width: 1080px;
+  margin: 90px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line{
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.wrapper .row{
+  display: flex;
+}
+.wrapper .row-1{
+  justify-content: flex-start;
+}
+.wrapper .row-2{
+  justify-content: flex-end;
+}
+.wrapper .row section{
+  background: #00cbfe;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.wrapper .row section::before{
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #00cbfe;
+  top: 28px;
+ 
+  transform: rotate(45deg);
+}
+.row-1 section::before{
+  right: -7px;
+}
+.row-2 section::before{
+  left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon{
+  position: absolute;
+  background: #00cbfe;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: black;
+  background-color: #00cbfe;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+}
+.center-line .scroll-icon{
+  bottom: 0px;
+  left: 50%;
+  background: #00cbfe;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.row-1 section .icon{
+  top: 15px;
+  right: -60px;
+}
+.row-2 section .icon{
+  top: 15px;
+  left: -60px;
+}
+.row section .details,
+.row section .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    background:#00cbfe;
+}
+.row section .details span{
+
+    background:#00cbfe;
+}
+
+.row section .details .title{
+  font-size: 22px;
+  font-weight: 600;
+    background:#00cbfe;
+}
+
+
+.row section p{
+  margin: 10px 0 17px 0;
+   background:#00cbfe;
+}
+.row section .bottom a{
+  text-decoration: none;
+  background: #00cbfe;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  /* font-size: 17px; */
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.row section .bottom i{
+
+  background:#00cbfe;
+  
+}
+
+
+.row section .bottom a:hover{
+  transform: scale(0.97);
+}
+@media(max-width: 790px){
+  .wrapper .center-line{
+    left: 40px;
+  }
+  .wrapper .row{
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row section{
+    width: 100%;
+  }
+  .row-1 section::before{
+    left: -7px;
+  }
+  .row-1 section .icon{
+    left: -60px;
+  }
+}
+@media(max-width: 440px){
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon{
+    display: none;
+  }
+  .wrapper .row{
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+{% endblock css %}
+
+
+
+
+{% block body %}
+
+
+
+<div class="wrapper2">
+  <div class="head-text">
+    Give Your Valuable Review <br> About this Project!
+  </div>
+  <div class="chat-box">
+
+    <form action="#">
+        <div class="head-text" style="color:white; font-size: 15px; font-weight: 400;  margin-top:-25px ; background: #000;  ">
+     Fll this Google Form to Give your <br> Precious Ideas, Modifications and Advices!
+  </div>
+          
+     
+        <div class="row1" style="color:white; background: #000;" >
+        
+               <div class="historytab"  style=" margin-top:-25px ; margin-bottom:-25px;">
+         <a  href="/error"> Write Review Here! </a>
+
+          
+
+        </div>
+           
+            
+        </div>
+    </div>
+
+
+</div>
+<!--
+<div>
+
+<div class="head-text  " style="color:#00cbfe; align:centre; font-size: 28px; font-weight: 500;
+  margin-top: 58px ; margin-bottom: -58px ;
+ text-align: center; background: #000;  ">
+     Some of the Previous Reviews!
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+ <div class="wrapper">
+    <div class="center-line">
+      <a href="#" class="scroll-icon"><i class="fas fa-caret-up" style="  background: #00cbfe; "></i></a>
+    </div>
+
+
+
+    <div class="row row-1">
+      <section>
+        <i class="icon fas fa-heart"></i>
+      
+        <div class="details">
+          <span class="title"> Wesbsite is vey Good!</span>
+          <span>05 Sept 2021</span>
+        </div>
+        <p>The website is looking really very cool. It's presentation is just mind blowing. Keep it Up Bro!</p>
+        <div class="bottom">
+           <a >
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          </a>
+          <i>-Rudransh Srivastava (Student)</i>
+        </div>
+      </section>
+    </div>
+    
+
+
+
+
+
+
+     <div class="row row-2">
+      <section>
+        <i class="icon fas fa-heart"></i>
+        <div class="details">
+          <span class="title"> This Idea is very innovative!</span>
+          <span>05 Sept 2021</span>
+        </div>
+        <p>This idea is relly very Amazing. It is very innovative and new Section. We really Liked this!</p>
+        <div class="bottom">
+         <a >
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          </a>
+          <i>- Kausstubh Jaiswal (Student)</i>
+        </div>
+      </section>
+    </div>
+
+
+
+
+
+
+
+<div class="row row-1">
+      <section>
+        <i class="icon fas fa-heart"></i>
+      
+        <div class="details">
+          <span class="title"> New sparkel of M.L.!</span>
+          <span>05 Sept 2021</span>
+        </div>
+        <p>You always bring something new to us. and this one is really very cool brother. Keep Growing!</p>
+        <div class="bottom">
+           <a >
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          <i class="fas fa-star" style="  background: #00cbfe; color:black; font-size:18px; "  ></i>
+          </a>
+          <i>-Narayan Jaiswal(Student)</i>
+        </div>
+      </section>
+    </div>
+    
+
+
+
+
+
+  </div>
+
+-->
+
+
+{% endblock body %}

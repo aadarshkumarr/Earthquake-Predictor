@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+
+{% block title %} Homepage {% endblock title %}
+ 
+{% block titleactive1 %} active {% endblock titleactive1 %} 
+
+
+
+    
+
+{% block headthing %}
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" >
+
+    
+{% endblock headthing %}
+
+
+       
+
+
+
+
+{% block css %}
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #00cbfe;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contain{
+  max-width: 450px;
+  border: 1px solid #00cbfe;
+  margin: 40px auto;
+  padding: 40px;
+}
+
+
+.contain h3{
+ color: #00cbfe;
+ text-align:centre;
+ font-size: 19px;
+ font-weight:500;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  color:black;
+  
+}
+
+ .btnn{
+  color:black;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.labe{
+  color:White;
+  margin :  10px;
+}
+
+
+
+
+
+
+
+.cards{
+margin: 0 auto;
+padding: 40px 40px;
+user-select: none; 
+   -webkit-user-select: none; 
+   -khtml-user-select: none; 
+   -moz-user-select: none; 
+   -ms-user-select: none; }
+
+.titlee{
+font-size:30px;
+color : #00cbfe;
+font-weight: 500;
+display:flex;
+justify-content: center;
+}
+
+
+.animate__pulse {
+  --animate-duration: 2s;
+}
+
+
+
+
+.historytab {
+margin: 15px ;
+margin-bottom: 120px;
+width: 100%;
+display:flex;
+justify-content: space-around;
+
+}
+ .historytab a{
+padding:10px 10px;
+margin: 15px auto;
+text-decoration:none;
+cursor: pointer;
+color:black;
+font-size: 18px;
+font-weight: 500;
+border-radius: 5px;
+text-align: center;
+background: #00cbfe;
+font-weight: 600;
+}
+
+.retrnn{
+display: flex;
+
+}
+
+
+{% endblock css %}
+
+
+{% block body %}
+
+
+<div class="contain">
+     
+
+ 
+<h3 > Fill following Details to predict the Earthquake Possibility around you! <br> <br> </h3>
+
+<div>
+  <form action="/prediction"  method="post">
+  <br>
+    <label class="labe"> Lattitude </label>
+    <input type="number" step="0.01" min="8" max="38" maxlength="4"  name="a" placeholder="Format- 26.76">
+    <p style="font-size:13px; color : #00cbfe; font-weight: 400;" > Range- 8°4'N and 37°6'N (Indian Coordinates) </p>
+ <br>
+    <label class="labe" >Longitude </label>
+    <input type="number" step="0.01" min="68" max="98" maxlength="4"   name="b" placeholder="Format- 83.37">
+    <p style="font-size:13px; color : #00cbfe; font-weight: 400;" >  Range- 68°7'E and 97°25'E (Indian Coordinates) </p>
+   
+  <br>
+    <label class="labe" >Height</label>
+    <input type="number" step="0.01" min="0" max="280" maxlength="5"   name="c" placeholder="Format- 84.00">
+    <p style="font-size:13px; color : #00cbfe; font-weight: 400;" > Range- 0m-280m (Indian Levels) </p>
+    
+ 
+  <br>   <br>  
+    <input class="btnn" type="submit" value="Predict">
+  </form>
+</div>
+
+</div>
+
+
+{% endblock body %}

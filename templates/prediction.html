@@ -1,0 +1,217 @@
+
+{% extends 'base.html' %}
+
+
+{% block titleactive4 %} active {% endblock titleactive4 %}
+
+{% block title %} 
+
+Source Code of Project
+{% endblock title %}
+
+{% block headthing %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock headthing %}
+
+
+{% block css %}
+
+
+
+.wrapper{
+position: relative;
+margin : 40px auto;
+max-width: 400px;
+background: #000;
+border-radius: 5px;
+box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+border: 2px solid white;
+}
+
+.wrapper .head-text{
+line-height: ;
+color: #000;
+border-radius: 5px 5px 0 0;
+border-bottom: 2px solid black;
+padding: 20px 20px;
+font-weight: 500;
+font-size: 18px;
+background: #00cbfe;
+text-align: center;
+}
+
+.wrapper .chat-box{
+padding: 20px;
+width: 100%;
+}
+
+.chat-box form{
+padding: 35px 25px;
+margin: 20px 0;
+border-radius: 5px;
+border: 1px solid lightgrey;
+background: #000;
+}
+.chat-box form .field{
+height: 30px;
+width: 100%;
+
+}
+
+
+
+
+.historytab {
+margin: 15px auto;
+width: 100%;
+display: flex;
+background: #000;
+}
+ .historytab a{
+padding:10px 10px;
+align-items: self;
+margin: 15px auto;
+text-decoration:none;
+cursor: pointer;
+color: #000;
+font-size: 18px;
+font-weight: 500;
+border: 2px solid Black;
+border-radius: 5px;
+background: #00cbfe;
+
+}
+
+.retrnn{
+display: flex;
+
+}
+
+
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+.row1{
+  color: white;
+  background: White;
+  text-align: center;
+  margin: 10px auto ;
+
+}
+
+.row1 p{ 
+font-size: 35px;
+color : Black;
+margin:  auto;
+letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+.cards{
+margin: 0 auto;
+padding: 40px 40px;
+user-select: none; 
+   -webkit-user-select: none; 
+   -khtml-user-select: none; 
+   -moz-user-select: none; 
+   -ms-user-select: none; }
+
+.titlee{
+font-size:30px;
+color : #00cbfe;
+font-weight: 500;
+display:flex;
+justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+{% endblock css %}
+
+
+
+
+{% block body %}
+
+
+
+<div class="wrapper">
+  <div class="head-text">
+    The chances of Earthquake according to Predicted Result is:
+  </div>
+  <div class="chat-box">
+
+    <form action="#">
+       
+               
+        <div class="row1" style="color:white; background: #000;" >
+        The expected  intensity at Richter magnitude at the Provided Coordinates is about :
+        
+          <div style="color:white; font-size: 50px; font-weight: 400; background: #000; "  >  {{ p }}  </div>
+            
+               <br> 
+               
+               The Location is at: <br>
+             <a  style="text-decoration: none;
+            color: #00cbfe; font-size:22px; font-weight: 500; "> 
+             {{ q }} </a>  Risk!  <br> <br>
+
+               <hr> <br> 
+            Please go through our <br>
+             <a   href="/aboutproject" target="_blank" style="text-decoration: underline;
+            color: #00cbfe; font-weight: 500; "> 
+            "Project Limitations" </a> <br> first before any further actions ! 
+
+            
+        </div>
+    </div>
+
+
+    </form>
+    
+    
+      
+        <div class="historytab"  style=" margin-top:-25px ;" >
+         <a  href="/"> Predict Again </a>
+        </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,165 @@
+
+{% extends 'base.html' %}
+
+
+
+
+{% block title %} 
+
+Developer
+
+{% endblock title %}
+
+{% block headthing %} 
+
+{% endblock headthing %}
+
+
+
+
+{% block css %}
+
+.wrappersv{
+      background: #fff;
+      border-radius: 5px;
+      padding: 25px;
+      max-width: 380px;
+      width: 100%;
+      margin: 60px;
+       border: 2px solid black;
+      box-shadow: 0px 5px 10px rgba(f,f,f,0.2);
+       display: block;
+    margin-left: auto;
+    margin-right: auto ;
+  }
+  
+
+  .slink{
+      background:  #00cbfe;
+      display: block;
+      margin-bottom: 12px;
+      border-radius: 5px;
+      padding: 8px 15px;
+      border: 2px solid #000;
+      transition: all 0.2s ease;
+      font-size: 15px;
+      
+  }
+  
+  .slinkh{
+     
+      display: block;
+      margin-bottom: 15px;
+      margin-top: 20px ;
+      border-radius: 0px;
+      padding: 18px 15px;
+      font-weight:600;
+      border: 2px solid #000000ce;
+      transition: all 0.6s ease;
+      text-decoration: none;
+       background:  #00cbfe;
+  }
+  
+  .slinkf{
+      background:  #00cbfe;
+      display: block;
+      margin-bottom: 12px;
+      border-radius: 5px;
+      padding: 8px 15px;
+      border: 0px solid #ffffffce;
+      transition: all 0.2s ease;
+      text-align: center;
+      font-size: 12px;
+      
+  }
+  
+  .slink{
+
+  animation: ease-in-out;
+      background: rgb(0, 0, 0);
+      color: #00cbfe;
+  }
+
+  .detailsv{
+      
+      background: #fff;
+     text-align: center;
+    }
+
+
+    .detailsv span{
+        background: #fff;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+
+
+
+
+
+
+{% endblock css %}
+
+
+
+
+
+
+{% block body %}
+ 
+
+
+  <div style=" 
+font-size:22px;
+color: #00cbfe;
+font-weight:500;
+  margin: 0 auto;
+   text-align: center;
+  padding: 10px;
+  margin-top:20px;
+  margin-bottom:-45px;">
+
+Connect at following Social Handles :
+</div>
+
+<div class="wrappersv">
+
+  <header class="slinkh"  style=" background:  #00cbfe; " >
+    <div class="detailsv"  style=" background:  #00cbfe; " >
+      <span class="name" style=" background:  #00cbfe; font-size: 24px; "> AADARSH KUMAR  </span>
+      <p style=" font-size: 14px; background:  #00cbfe; color: #242526;"> Bachelor of Computer Applicaion (BCA) </br> 
+      Masters of Computer Applicaion (MCA)<br>
+      ( Second Year )
+      </p>
+      
+    </div>
+  </header>
+
+  
+    
+      <div class="center">
+        <a href="https://www.linkedin.com/in/aadarshk01/" target="_blank"
+          style="text-decoration: none;  font-weight:500;  background: #fff;  color:#0e76a8">
+          <div class="slink">
+            <span class="fab fa-linkedin"> </span> &nbsp &nbsp LinkedIn
+          </div></div> </a>
+          
+              
+                    
+          
+           <div class="center">
+        <a href="https://aadarshkumar.in" target="_blank"
+          style="text-decoration: none;  font-weight:500;  background: #fff;  color:#0e76a8">
+          <div class="slink">
+            <span class="fas fa-link"> </span> &nbsp &nbsp  Website
+          </div></div> </a>
+
+          
+
+             </div>
+      </div>
+  </div>
+
+{% endblock body %}
+
